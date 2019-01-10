@@ -1,0 +1,6 @@
+framework module Pods_MLoadingViewKit_Tests {
+  umbrella header "Pods-MLoadingViewKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
