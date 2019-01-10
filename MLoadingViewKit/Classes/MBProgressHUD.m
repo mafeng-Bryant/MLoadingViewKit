@@ -1048,13 +1048,13 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
     _loadingType = loadingType;
     switch (_loadingType) {
         case PPLoadingAnimationViewTypeBlack:
-            self.image = Image(@"loading_black");
+            self.image = [UIImage imageNamed:@"loading_black"];
             break;
         case PPLoadingAnimationViewTypeGray:
-            self.image = Image(@"loading_gray");
+            self.image = [UIImage imageNamed:@"loading_gray"];
             break;
         case PPLoadingAnimationViewTypeWhite:
-            self.image = Image(@"loading_white");
+            self.image = [UIImage imageNamed:@"loading_white"];
             break;
         default:
             break;

@@ -60,18 +60,13 @@
     PPLoadingView *loading=[[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([PPLoadingView class]) owner:self options:nil] lastObject];
     [loading restartAnimation];
     loading.textLbl.text = text;
-    loading.textLbl.font = PPF2;
+    loading.textLbl.font =[UIFont systemFontOfSize:14];
     loading.textLbl.textColor = [UIColor darkGrayColor];
     loading.textLbl.textAlignment = NSTextAlignmentCenter;
     loading.textLbl.backgroundColor = [UIColor clearColor];
     [loading setFrame:view.bounds];
     [view addSubview:loading];
     return loading;
-}
-
-+ (PPLoadingView *)showTo:(UIView *)view
-{
-    return [self showTo:view text:PPString(VIEW_LOADING)];
 }
 
 - (void)restartAnimation

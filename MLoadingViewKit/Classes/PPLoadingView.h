@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PPUIFont.h"
-#import "PPLocalizedStringHeader.h"
 
 static CGFloat const kHideAnimationDuration = 0.25;
 
@@ -24,7 +22,6 @@ static CGFloat const kHideAnimationDuration = 0.25;
 
 - (void)hide:(void(^)(BOOL finished))block;
 
-+ (PPLoadingView *)showTo:(UIView *)view;
 + (PPLoadingView *)showTo:(UIView *)view text:(NSString *)text;
 
 @end

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PPLoadingView.h"
 #import "MBProgressHUD.h"
+#import "PPLoadingView.h"
 
 @interface PPHUDView : MBProgressHUD
 
@@ -38,7 +38,7 @@
 
 + (PPHUDView *)showTo:(UIView *)view;
 
-+ (PPHUDView *)showLoadingTo:(UIView *)view;
++ (PPHUDView *)showLoadingTo:(UIView *)view text:(NSString *)text;
 
 + (PPHUDView *)showTo:(UIView *)view text:(NSString *)text;
 

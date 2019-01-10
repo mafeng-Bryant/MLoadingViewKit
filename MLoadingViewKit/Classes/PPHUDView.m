@@ -9,8 +9,8 @@
 #import "PPHUDView.h"
 
 #define kPPHUDViewAnimationTime 1.6
-#define PPHUDViewColor RGB(68,68,68,0.9)
-
+#define PPHUDViewColor [UIColor colorWithRed:68/255.0 green:68/255.0 blue:68/255.0 alpha:0.9]
+#define PFONT(NAME, FONTSIZE)    [UIFont fontWithName:(NAME) size:(FONTSIZE)]
 
 @interface PPHUDView()
 
@@ -23,10 +23,12 @@
 
 - (NSTimeInterval)delayTime:(NSString *)string
 {
-    if (isValidString(string) && string.length>25) { //大于25个字就返回2.5s
-        return 2.0;
-    }else if(isValidString(string) && string.length>40) { //大于40个字就返回2.6s
-        return 2.6;
+    if ([string isKindOfClass:[NSString class]]) {
+        if (string.length > 25) {//大于25个字就返回2.5s
+            return 2.0;
+        }else if (string.length > 40){//大于40个字就返回2.6s
+            return 2.6;
+        }
     }
     return kPPHUDViewAnimationTime;
 }
@@ -35,11 +37,12 @@
              text:(NSString *)text
             delay:(CGFloat)time
 {
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:Image(imageName)];
+    UIImage* image = [UIImage imageNamed:imageName];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     self.customView = imageView;
     self.mode = MBProgressHUDModeCustomView;
-    self.labelFont = PPF2Border;
-    self.detailsLabelFont = PPF2Border;
+    self.labelFont = PFONT(@"Avenir-Roman",14);
+    self.detailsLabelFont = PFONT(@"Avenir-Roman",14);
     self.detailsLabelText = text;
     self.color = PPHUDViewColor;
     [self hide:YES afterDelay:time];
@@ -47,7 +50,8 @@
 
 - (void)setImage:(NSString *)imageName view:(UIView*)view
 {
-    UIImageView* imageView = [[UIImageView alloc] initWithImage:Image(imageName)];
+    UIImage* image = [UIImage imageNamed:imageName];
+    UIImageView* imageView = [[UIImageView alloc] initWithImage:image];
     self.color =  [UIColor lightGrayColor];
     self.customView = imageView;
     self.labelText = @"";
@@ -63,12 +67,13 @@
            detail:(NSString *)detail
             delay:(CGFloat)time
 {
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:Image(imageName)];
+    UIImage* image = [UIImage imageNamed:imageName];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     self.customView = imageView;
     self.mode = MBProgressHUDModeCustomView;
     self.labelText = text;
-    self.labelFont = PPF2;
-    self.detailsLabelFont = PPF1;
+    self.labelFont = PFONT(@"Avenir-Light",14);
+    self.detailsLabelFont = PFONT(@"Avenir-Light",12);
     self.color = PPHUDViewColor;
     self.detailsLabelText = detail;
     [self hide:YES afterDelay:time];
@@ -114,8 +119,8 @@
     hub.labelText = title;
     hub.color = PPHUDViewColor;
     hub.detailsLabelText = detail;
-    hub.labelFont = PPF2;
-    hub.detailsLabelFont = PPF1;
+    hub.labelFont = PFONT(@"Avenir-Light",14);
+    hub.detailsLabelFont = PFONT(@"Avenir-Light",12);
     hub.removeFromSuperViewOnHide = YES;
     [hub hide:YES afterDelay:[hub delayTime:detail]];
 }
@@ -127,28 +132,30 @@
 
 + (void)showTips:(NSString*)message image:(NSString*)imageName showToView:(UIView*)view
 {
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:Image(imageName)];
+    UIImage* image = [UIImage imageNamed:imageName];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     PPHUDView *hub = [PPHUDView showTo:view];
     hub.mode = MBProgressHUDModeCustomView;
     hub.customView = imageView;
     hub.color = PPHUDViewColor;
     hub.detailsLabelText = message;
-    hub.detailsLabelFont = PPF1bBorder;
-    hub.detailsLabelColor = PPC7;
+    hub.detailsLabelFont = PFONT(@"Avenir-Roman",13);
+    hub.detailsLabelColor = [UIColor whiteColor];
     hub.removeFromSuperViewOnHide = YES;    
     [hub hide:YES afterDelay:[hub delayTime:message]];
 }
 
 + (void)showTips:(NSString*)message imageName:(NSString*)imageName
 {
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:Image(imageName)];
+    UIImage* image = [UIImage imageNamed:imageName];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     PPHUDView *hub = [PPHUDView showToWindow];
     hub.mode = MBProgressHUDModeCustomView;
     hub.customView = imageView;
     hub.color = PPHUDViewColor;
     hub.detailsLabelText = message;
-    hub.detailsLabelFont = PPF1bBorder;
-    hub.detailsLabelColor = PPC7;
+    hub.detailsLabelFont = PFONT(@"Avenir-Roman",13);
+    hub.detailsLabelColor = [UIColor whiteColor];
     hub.removeFromSuperViewOnHide = YES;
     [hub hide:YES afterDelay:[hub delayTime:message]];
 }
@@ -176,16 +183,16 @@
     return hub;
 }
 
-+ (PPHUDView *)showLoadingTo:(UIView *)view
++ (PPHUDView *)showLoadingTo:(UIView *)view text:(NSString *)text
 {
-   return [self showTo:view text:PPString(VIEW_LOADING)];
+   return [self showTo:view text:text];
 }
 
 + (PPHUDView *)showTo:(UIView *)view text:(NSString *)text
 {
     PPHUDView *hub = [PPHUDView showHUDAddedTo:view animated:YES];
     hub.labelText = text;
-    hub.labelFont = PPF2;
+    hub.labelFont = PFONT(@"Avenir-Light",14);
     hub.color = PPHUDViewColor;
     return hub;
 }
@@ -199,9 +206,10 @@
                detail:(NSString *)detail
 {
     [self setTitle:title detail:detail];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:Image(@"hub_error")];
-    self.labelFont = PPF2;
-    self.detailsLabelFont = PPF1;
+    UIImage* image = [UIImage imageNamed:@"hub_error"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    self.labelFont = PFONT(@"Avenir-Light",14);
+    self.detailsLabelFont = PFONT(@"Avenir-Light",12);
     self.customView = imageView;
     self.color = PPHUDViewColor;
     self.mode = MBProgressHUDModeCustomView;
@@ -213,9 +221,9 @@
     self.labelText = title;
     self.detailsLabelText = detail;
     self.removeFromSuperViewOnHide = YES;
-    self.color =PPHUDViewColor;
-    self.labelFont = PPF2;
-    self.detailsLabelFont = PPF1;
+    self.color = PPHUDViewColor;
+    self.labelFont = PFONT(@"Avenir-Light",14);
+    self.detailsLabelFont = PFONT(@"Avenir-Light",12);
 }
 
 - (void)showError:(NSError *)error
@@ -231,17 +239,17 @@
 
 - (void)showError:(NSError *)error afterDelay:(NSTimeInterval)delay
 {
-    [self setErrorTitle:[NSString stringWithFormat:@"%@ (%ld)",   error.userInfo[@"NSLocalizedErrorSummaryKey"],(long)error.code] detail:error.localizedDescription];
+    [self setErrorTitle:[NSString stringWithFormat:@"%@ (%ld)",error.descriptionSummary,(long)error.code] detail:error.localizedDescription];
     self.color = PPHUDViewColor;
-    self.labelFont = PPF2;
-    self.detailsLabelFont = PPF1;
+    self.labelFont = PFONT(@"Avenir-Light",14);
+    self.detailsLabelFont = PFONT(@"Avenir-Light",12);
     [self hide:YES afterDelay:delay];
 }
 
 - (void)showFailureStatus:(NSString *)desc code:(NSString*)code
 {
     NSString *txt = desc?desc:@"";
-    if (!isValidString(txt)) {
+    if (txt.length <=0) {
         [self hide:NO];
         return;
     }
@@ -252,11 +260,11 @@
                      code:(NSString*)code
                     delay:(CGFloat)time
 {
-    if (!desc || !isValidString(desc)) {
+    if (!desc || desc.length<=0) {
         [self hide:NO];
         return;
     }
-    [self setImage:@"hub_error" text:[NSString stringWithFormat:@"%@ (%@)",PPString(SHOPPINGCART_OOPS),code] detail:desc delay:time];
+    [self setImage:@"hub_error" text:[NSString stringWithFormat:@"%@ (%@)",@"Oops!",code] detail:desc delay:time];
 }
 
 
@@ -274,8 +282,8 @@
 {
     PPHUDView *hub = [PPHUDView showHUDAddedTo:inView animated:YES];
     hub.detailsLabelText = detail;
-    hub.labelFont = PPF2;
-    hub.detailsLabelFont = PPF1;
+    hub.labelFont = PFONT(@"Avenir-Light",14);
+    hub.detailsLabelFont = PFONT(@"Avenir-Light",12);
     hub.removeFromSuperViewOnHide = YES;
     hub.color = PPHUDViewColor;
     [hub setImage:@"hub_error" text:title delay:delayTime];
@@ -291,8 +299,8 @@
     hub.mode = MBProgressHUDModeText;
     hub.labelText = text;
     hub.detailsLabelText = title;
-    hub.labelFont = PPF2;
-    hub.detailsLabelFont = PPF1;
+    hub.labelFont = PFONT(@"Avenir-Light",14);
+    hub.detailsLabelFont = PFONT(@"Avenir-Light",12);
     hub.removeFromSuperViewOnHide = YES;
     hub.color = PPHUDViewColor;
     [hub hide:YES afterDelay:time];
