@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MBProgressHUD.h"
 #import "PPLoadingView.h"
-#import "PPLocalizedStringHeader.h"
-#import "VMacros.h"
-#import "PPUIFont.h"
+#import "MBProgressHUD.h"
 
 @interface PPHUDView : MBProgressHUD
 

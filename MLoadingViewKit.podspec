@@ -10,12 +10,11 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '1499603656@qq.com' => 'feng.ma@patpat.com' }
   s.source           = { :git => 'https://github.com/mafeng-Bryant/MLoadingViewKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+   s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.ios.deployment_target = '8.0'
+  s.platform            = :ios, "8.0"
   s.source_files = 'MLoadingViewKit/Classes/**/*'
-  # s.resource_bundles = {
-  #   'MLoadingViewKit' => ['MLoadingViewKit/Assets/*.png']
-  # }
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.frameworks = "Foundation","UIKit"
   s.dependency 'MExtensions', '~> 2.0.5'
+  s.requires_arc        = true
 end

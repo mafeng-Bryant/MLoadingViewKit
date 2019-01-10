@@ -45,7 +45,6 @@
     [self hide:YES afterDelay:time];
 }
 
-
 - (void)setImage:(NSString *)imageName view:(UIView*)view
 {
     UIImageView* imageView = [[UIImageView alloc] initWithImage:Image(imageName)];

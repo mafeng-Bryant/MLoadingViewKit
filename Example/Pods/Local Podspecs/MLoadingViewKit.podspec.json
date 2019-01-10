@@ -1,7 +1,7 @@
 {
   "name": "MLoadingViewKit",
   "version": "1.0.0",
-  "summary": "A short description of MLoadingViewKit.",
+  "summary": "MLoadingViewKit.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/mafeng-Bryant/MLoadingViewKit",
   "license": {
@@ -15,10 +15,15 @@
     "git": "https://github.com/mafeng-Bryant/MLoadingViewKit.git",
     "tag": "1.0.0"
   },
+  "social_media_url": "https://twitter.com/<TWITTER_USERNAME>",
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "MLoadingViewKit/Classes/**/*",
+  "frameworks": [
+    "Foundation",
+    "UIKit"
+  ],
   "dependencies": {
     "MExtensions": [
       "~> 2.0.5"
