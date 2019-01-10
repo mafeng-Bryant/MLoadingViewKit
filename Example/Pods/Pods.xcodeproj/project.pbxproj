@@ -10,7 +10,6 @@
 		0556336F93DF54ACDEC79BB9CE0284A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		0959913A88E3B392BACA2E5A2CBE6652 /* PPHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0ECEE57F2EA21126D35BE35D8F7F18 /* PPHUDView.m */; };
 		0D69A86069D899B509921A033DF3796A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		2654CF94DCDBBD7DBF28DAA47691D930 /* PPLoadingView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4D189D384DAF24176A3EFEEC898B3C10 /* PPLoadingView.xib */; };
 		3B29BFA2E4610DF4B37137950B77D54B /* MLoadingViewKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F912F76B62D4654B803B9BC4ACF2CCF /* MLoadingViewKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		485C6497EFABAF9DDC61F55025739308 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 67D486B3162EE8F06DE00CCA4B42E966 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48F9B91A583BD8F4A16331F9CFBB9298 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E435390619DB7705F67756275E4EA /* MBProgressHUD.m */; };
@@ -45,7 +44,7 @@
 /* Begin PBXFileReference section */
 		15A79E956AF328DE92E0104EEB009BE6 /* MLoadingViewKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MLoadingViewKit.modulemap; sourceTree = "<group>"; };
 		1C2E435390619DB7705F67756275E4EA /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MLoadingViewKit/Classes/MBProgressHUD.m; sourceTree = "<group>"; };
-		1DCA73BE2EFE137347FB55D74D62E3AC /* Pods_MLoadingViewKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MLoadingViewKit_Tests.framework; path = "Pods-MLoadingViewKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DCA73BE2EFE137347FB55D74D62E3AC /* Pods_MLoadingViewKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLoadingViewKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		269C635A290C8B88B5E2A80A29CC5972 /* Pods-MLoadingViewKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MLoadingViewKit_Example.modulemap"; sourceTree = "<group>"; };
 		26F2DE6ABB7880C0FC527BE9B56F1346 /* Pods-MLoadingViewKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MLoadingViewKit_Example-resources.sh"; sourceTree = "<group>"; };
 		344E7DE2CF0D18626ABB34F781EB9320 /* Pods-MLoadingViewKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MLoadingViewKit_Tests.modulemap"; sourceTree = "<group>"; };
@@ -55,19 +54,18 @@
 		488AABD189980E20827F094870AB3E13 /* Pods-MLoadingViewKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MLoadingViewKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4B1DAB830CEC5CA8588A32310C6193E4 /* Pods-MLoadingViewKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MLoadingViewKit_Example-dummy.m"; sourceTree = "<group>"; };
 		4D0253161255A6B3C7128FAEB8D64904 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D189D384DAF24176A3EFEEC898B3C10 /* PPLoadingView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PPLoadingView.xib; path = MLoadingViewKit/Classes/PPLoadingView.xib; sourceTree = "<group>"; };
 		50E580F77E2EC588A7E3426B58D885A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		549A58E3442D5E2E6D302B59EC0BD436 /* MLoadingViewKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = MLoadingViewKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		549A58E3442D5E2E6D302B59EC0BD436 /* MLoadingViewKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = MLoadingViewKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		643662845C649BC6DDBB2EB54DE58FC0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		643662845C649BC6DDBB2EB54DE58FC0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6707294E365240C1D4704DFD75146F0C /* PPLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PPLoadingView.m; path = MLoadingViewKit/Classes/PPLoadingView.m; sourceTree = "<group>"; };
 		67D486B3162EE8F06DE00CCA4B42E966 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MLoadingViewKit/Classes/MBProgressHUD.h; sourceTree = "<group>"; };
 		68293B7F02ABE56A5715410E8986CB1C /* PPLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PPLoadingView.h; path = MLoadingViewKit/Classes/PPLoadingView.h; sourceTree = "<group>"; };
 		7F912F76B62D4654B803B9BC4ACF2CCF /* MLoadingViewKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MLoadingViewKit-umbrella.h"; sourceTree = "<group>"; };
-		83125E576180AF3F43D721688AED18EF /* Pods_MLoadingViewKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MLoadingViewKit_Example.framework; path = "Pods-MLoadingViewKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83125E576180AF3F43D721688AED18EF /* Pods_MLoadingViewKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLoadingViewKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		841E81694FFC57F0C6410A37F1C0946A /* MLoadingViewKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MLoadingViewKit-prefix.pch"; sourceTree = "<group>"; };
 		8D98A25936B029324491D9FDA15BF5CA /* Pods-MLoadingViewKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MLoadingViewKit_Example-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98A1746DB8871230CEA6089A7C3CF92E /* Pods-MLoadingViewKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MLoadingViewKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		9940B4F9763B24698482C7681AB98C5D /* Pods-MLoadingViewKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MLoadingViewKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		99C8746666F4B9D79753570BF2725535 /* Pods-MLoadingViewKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MLoadingViewKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -75,13 +73,13 @@
 		B2CE07642CA2C0C28E9D1B4E4BAEA3DA /* MLoadingViewKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MLoadingViewKit.xcconfig; sourceTree = "<group>"; };
 		B74DA350FD9B24F901867709736E9212 /* Pods-MLoadingViewKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MLoadingViewKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CC9EF8C093D2B4E4B1800668DDF676DC /* Pods-MLoadingViewKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MLoadingViewKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		CF61554A796FF49C1B8E6825ADE21F18 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		CF61554A796FF49C1B8E6825ADE21F18 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D4B2B93A5FAF2AAA5265001C9CAA28E6 /* Pods-MLoadingViewKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MLoadingViewKit_Tests-resources.sh"; sourceTree = "<group>"; };
 		D57A21BCBDBC0203EA80D5A830B2CBAE /* Pods-MLoadingViewKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MLoadingViewKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E661D8BA8E18E9580F61D63632D8C5EC /* Pods-MLoadingViewKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MLoadingViewKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		EA0BF6D53F8F81A12EBAA40CC2CDA628 /* PPHUDView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PPHUDView.h; path = MLoadingViewKit/Classes/PPHUDView.h; sourceTree = "<group>"; };
 		ECADBBD378C2C6B88DE11DA74D0B5479 /* Pods-MLoadingViewKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MLoadingViewKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		FAFD3C7EF517821963C70BA121540D48 /* MLoadingViewKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MLoadingViewKit.framework; path = MLoadingViewKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFD3C7EF517821963C70BA121540D48 /* MLoadingViewKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MLoadingViewKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD90A370EC631FFF2AB4FEADD9A7F6EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF58EAD274C4DFDA93FB687E560FD463 /* Pods-MLoadingViewKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MLoadingViewKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,7 +159,6 @@
 				3C0ECEE57F2EA21126D35BE35D8F7F18 /* PPHUDView.m */,
 				68293B7F02ABE56A5715410E8986CB1C /* PPLoadingView.h */,
 				6707294E365240C1D4704DFD75146F0C /* PPLoadingView.m */,
-				4D189D384DAF24176A3EFEEC898B3C10 /* PPLoadingView.xib */,
 				4A1D09B57A0F50F1099E00C926D65932 /* Pod */,
 				E246D691D204513FCA67EE8936622622 /* Support Files */,
 			);
@@ -376,7 +373,6 @@
 				AC1F70F78BF2DCEE40D478A2C37E9064 /* MLoadingViewKit-dummy.m in Sources */,
 				0959913A88E3B392BACA2E5A2CBE6652 /* PPHUDView.m in Sources */,
 				9EB519284DFFB60E50FDF5C4802CE90B /* PPLoadingView.m in Sources */,
-				2654CF94DCDBBD7DBF28DAA47691D930 /* PPLoadingView.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
