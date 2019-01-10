@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'MLoadingViewKit_Example' do
+  pod 'MLoadingViewKit', :path => '../'
+
+  target 'MLoadingViewKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
