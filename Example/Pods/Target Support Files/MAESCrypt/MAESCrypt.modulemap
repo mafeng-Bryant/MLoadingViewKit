@@ -1,6 +1,0 @@
-framework module MAESCrypt {
-  umbrella header "MAESCrypt-umbrella.h"
-
-  export *
-  module * { export * }
-}

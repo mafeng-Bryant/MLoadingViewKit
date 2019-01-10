@@ -1,41 +1,15 @@
 PODS:
-  - MAESCrypt (1.0.0)
-  - MExtensions (2.0.5):
-    - MAESCrypt (~> 1.0.0)
-    - MLocalizedStringKit (~> 1.0.0)
-    - MUIFont (~> 1.0.0)
-    - SDWebImage
-  - MLoadingViewKit (1.0.3):
-    - MExtensions (~> 2.0.5)
-  - MLocalizedStringKit (1.0.0)
-  - MUIFont (1.0.0)
-  - SDWebImage (4.4.3):
-    - SDWebImage/Core (= 4.4.3)
-  - SDWebImage/Core (4.4.3)
+  - MLoadingViewKit (1.0.5)
 
 DEPENDENCIES:
   - MLoadingViewKit (from `../`)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - SDWebImage
-  https://github.com/mafeng-Bryant/Specs:
-    - MAESCrypt
-    - MExtensions
-    - MLocalizedStringKit
-    - MUIFont
 
 EXTERNAL SOURCES:
   MLoadingViewKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MAESCrypt: baf33916e9cd34febc561d0f1b6c639d719175e2
-  MExtensions: 222a94b1eb52dbdaecc61a754daa3e9f631a003f
-  MLoadingViewKit: 714fac962da44c90252511128e5bdefa77deb670
-  MLocalizedStringKit: 6a7a076c228d94347ab9f37794e028e62591028c
-  MUIFont: 52cc9d5e4e147dfb10adcb4421363a2b17454fd4
-  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  MLoadingViewKit: 176dafc7a2acd31988c43c54bff546ba2d613357
 
 PODFILE CHECKSUM: 89f8b35f0100c807cbbf34cdea357c6b86329d2f
 

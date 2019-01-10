@@ -76,3 +76,10 @@
           detailString:(NSString *)detail;
 
 @end
+
+
+@interface NSError(PP_Error)
+
+- (NSString *)descriptionSummaryDesc;
+
+@end

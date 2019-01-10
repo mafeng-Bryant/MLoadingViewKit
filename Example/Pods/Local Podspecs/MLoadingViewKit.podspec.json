@@ -1,6 +1,6 @@
 {
   "name": "MLoadingViewKit",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "summary": "MLoadingViewKit.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/mafeng-Bryant/MLoadingViewKit",
@@ -13,15 +13,10 @@
   },
   "source": {
     "git": "https://github.com/mafeng-Bryant/MLoadingViewKit.git",
-    "tag": "1.0.3"
+    "tag": "1.0.5"
   },
-  "source_files": "MLoadingViewKit/Classes/**/*",
   "platforms": {
     "ios": "8.0"
   },
-  "dependencies": {
-    "MExtensions": [
-      "~> 2.0.5"
-    ]
-  }
+  "source_files": "MLoadingViewKit/Classes/**/*"
 }

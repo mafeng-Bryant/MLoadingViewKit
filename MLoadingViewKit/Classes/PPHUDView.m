@@ -127,7 +127,7 @@
 
 + (void)showErrorDetailMessage:(NSString *)message
 {
-    [self showTitle:PPString(SHOPPINGCART_OOPS) detail:message];
+    [self showTitle:@"Oops!" detail:message];
 }
 
 + (void)showTips:(NSString*)message image:(NSString*)imageName showToView:(UIView*)view
@@ -239,7 +239,7 @@
 
 - (void)showError:(NSError *)error afterDelay:(NSTimeInterval)delay
 {
-    [self setErrorTitle:[NSString stringWithFormat:@"%@ (%ld)",error.descriptionSummary,(long)error.code] detail:error.localizedDescription];
+    [self setErrorTitle:[NSString stringWithFormat:@"%@ (%ld)",error.descriptionSummaryDesc,(long)error.code] detail:error.localizedDescription];
     self.color = PPHUDViewColor;
     self.labelFont = PFONT(@"Avenir-Light",14);
     self.detailsLabelFont = PFONT(@"Avenir-Light",12);
@@ -315,6 +315,17 @@
 @end
 
 
+@implementation NSError(PP_Error)
+
+- (NSString *)descriptionSummaryDesc
+{
+    if ([self.userInfo isKindOfClass:[NSDictionary class]]) {
+        return self.userInfo[@"NSLocalizedErrorSummaryKey"]?self.userInfo[@"NSLocalizedErrorSummaryKey"]:@"";
+    }
+    return @"";
+}
+
+@end
 
 
 
