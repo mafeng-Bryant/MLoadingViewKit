@@ -5,7 +5,7 @@ PODS:
     - MLocalizedStringKit (~> 1.0.0)
     - MUIFont (~> 1.0.0)
     - SDWebImage
-  - MLoadingViewKit (1.0.0):
+  - MLoadingViewKit (1.0.3):
     - MExtensions (~> 2.0.5)
   - MLocalizedStringKit (1.0.0)
   - MUIFont (1.0.0)
@@ -32,11 +32,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   MAESCrypt: baf33916e9cd34febc561d0f1b6c639d719175e2
   MExtensions: 222a94b1eb52dbdaecc61a754daa3e9f631a003f
-  MLoadingViewKit: 693f83f7e4787c90d4f1f20aad1ebb30f6ccec75
+  MLoadingViewKit: 714fac962da44c90252511128e5bdefa77deb670
   MLocalizedStringKit: 6a7a076c228d94347ab9f37794e028e62591028c
   MUIFont: 52cc9d5e4e147dfb10adcb4421363a2b17454fd4
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
 
-PODFILE CHECKSUM: ebf4b5596bc0fc4f1dde5bc0b09f2cfc9a6143f6
+PODFILE CHECKSUM: 89f8b35f0100c807cbbf34cdea357c6b86329d2f
 
 COCOAPODS: 1.5.3

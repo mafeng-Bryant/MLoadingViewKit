@@ -3,7 +3,7 @@ source 'https://github.com/mafeng-Bryant/Specs.git'
 
 use_frameworks!
 
-platform :ios, '6.0'
+platform :ios, '8.0'
 
 target 'MLoadingViewKit_Example' do
   pod 'MLoadingViewKit', :path => '../'
