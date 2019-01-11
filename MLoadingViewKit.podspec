@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MLoadingViewKit'
-  s.version          = '1.0.9'
+  s.version          = '1.1.0'
   s.summary          = 'MLoadingViewKit.'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -11,7 +11,6 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/mafeng-Bryant/MLoadingViewKit.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.source_files = 'MLoadingViewKit/Classes/**/*'
-  s.resource_bundles = {'MLoadingViewKit' => ['MLoadingViewKit/**/*.{xib,nib,storyboard,png}'] 
-  }
+  s.resources    = "MLoadingViewKit/MLoadingViewKit/**/*.{xib,nib,storyboard,png}"
   
 end
