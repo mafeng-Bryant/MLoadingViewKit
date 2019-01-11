@@ -1,5 +1,5 @@
 PODS:
-  - MLoadingViewKit (1.0.5)
+  - MLoadingViewKit (1.0.7)
 
 DEPENDENCIES:
   - MLoadingViewKit (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MLoadingViewKit: 176dafc7a2acd31988c43c54bff546ba2d613357
+  MLoadingViewKit: 1720608068e247a237d625fe460fade474742f49
 
 PODFILE CHECKSUM: 89f8b35f0100c807cbbf34cdea357c6b86329d2f
 
